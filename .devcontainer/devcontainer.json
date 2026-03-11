@@ -65,7 +65,7 @@
 	"onCreateCommand": "",
 
 	// Use 'postCreateCommand' to run commands once after the container is created
-	"postCreateCommand": "mkdir -p models/hugging_face && mkdir -p models/ollama",
+	"postCreateCommand": "mkdir -p models/hugging_face && mkdir -p models/ollama && bash .devcontainer/install_ollama.sh",
 
 	// Use 'postAttachCommand' to run TensorBoard
 	"postAttachCommand": ""
