@@ -241,6 +241,30 @@ server {
 
 ## Troubleshooting
 
+### OpenSSL warning during cmake
+
+If cmake prints the following warning, HTTPS support will be disabled:
+
+```
+CMake Warning at vendor/cpp-httplib/CMakeLists.txt:150 (message):
+  OpenSSL not found, HTTPS support disabled
+```
+
+Install the OpenSSL development libraries and re-run cmake:
+
+```bash
+# Debian/Ubuntu
+sudo apt install -y libssl-dev
+
+# RHEL/Fedora
+sudo dnf install -y openssl-devel
+
+# Then re-run cmake
+cd /opt/llama.cpp
+sudo cmake -B build -DGGML_CUDA=ON
+sudo cmake --build build --config Release -j$(nproc)
+```
+
 ### Service won't start
 
 Check logs for errors:
