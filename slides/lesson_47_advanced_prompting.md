@@ -171,17 +171,6 @@ A: [model continues the pattern]
 
 ---
 
-## CoT limitations
-
-1. **Still makes mistakes** - following steps doesn't guarantee correctness
-2. **Verbose** - uses more tokens (higher cost, slower)
-3. **Can fabricate reasoning** - steps may sound logical but be wrong
-4. **Model-dependent** - works better on larger models
-
-**Solution:** Combine CoT with other techniques (like self-consistency)
-
----
-
 # ReAct: Reasoning + Acting
 
 Combining reasoning with tool use
