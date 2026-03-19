@@ -3,9 +3,13 @@ huggingface-hub
 langchain
 langchain-community
 langchain-core
+langchain-huggingface
 langchain-ollama
 langchain-openai
+langchain-postgres
 openai
+psycopg[binary]
 python-dotenv
+sentence-transformers
 torch
 transformers
